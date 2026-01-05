@@ -2,7 +2,7 @@
   <img src="banner.jpg" width="100%" alt="Banner" />
   <br/>
 </div>
-|# 💫 About Me:
+# 💫 About Me:
 Hi, I'm Vrushabh! I am passionate about **Financial Engineering** and using data to drive decision-making. My focus is on building robust tools that optimize portfolios and secure financial data.<br><br>- 💼 Working on: A final-year capstone project on **Portfolio Optimization (CGPO)** using cognitive computing.<br>- 📊 Focus areas: **Quantitative Analysis, Cybersecurity in Finance, and Data Visualization**.<br>- 📚 Reading about: **Modern Portfolio Theory (MPT)** and **Black-Scholes models**.<br>- 👯 Looking to collaborate on: Open-source **FinTech tools** or backtesting libraries.<br>- 🎯 Goal: Bridging the gap between **raw market data** and **actionable investment insights**.
 
 
@@ -24,5 +24,3 @@ Hi, I'm Vrushabh! I am passionate about **Financial Engineering** and using data
 
 ---
 [![](https://visitcount.itsvg.in/api?id=Vru-Jain&icon=0&color=0)](https://visitcount.itsvg.in)
-
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->

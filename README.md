@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="banner.jpg" width="100%" alt="Banner" />
+  <img src="banner.png" width="100%" alt="Banner" />
   <br/>
 </div>
 
@@ -62,19 +62,17 @@
 </p>
 
 <br />
-<h2 align="center">📊 GitHub Stats</h2>
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Vru-Jain&theme=tokyonight&hide_border=true&show_icons=true" height="150" alt="stats graph" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Vru-Jain&theme=tokyonight&hide_border=true&layout=compact" height="150" alt="languages graph" />
-</div>
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Vru-Jain&theme=tokyonight&hide_border=true" height="150" alt="streak graph" />
-</div>
-<br />
 
-<h3 align="center">🏆 Achievements</h3>
+<h2 align="center">🏆 Achievements</h2>
 <div align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=Vru-Jain&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4" />
+</div>
+
+<br />
+
+<h3 align="center">🔥 Consistency</h3>
+<div align="center">
+  <img src="https://streak-stats.demolab.com?user=Vru-Jain&theme=tokyonight&hide_border=true&background=0D1117" height="150" alt="streak graph" />
 </div>
 
 <hr/>

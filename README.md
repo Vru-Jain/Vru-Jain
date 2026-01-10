@@ -3,7 +3,12 @@
   <br/>
 </div>
 
-<h2 align="left">💫 About Me</h2>
+<h2 align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=36BCF7&center=true&vCenter=true&width=435&lines=Quantitative+Finance;Portfolio+Optimization+(CGPO);Cybersecurity+%26+Data+Science;Building+Robust+Financial+Tools" alt="Typing SVG" />
+  </a>
+</h2>
+
 <p align="left">
   Hi, I'm Vrushabh! I am passionate about <b>Financial Engineering</b> and using data to drive decision-making. My focus is on building robust tools that optimize portfolios and secure financial data.
 </p>
@@ -62,8 +67,8 @@
 </p>
 
 <br />
-<hr/>
 
-<p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" />
-</p>
+<h2 align="center">🐍 Contribution Graph</h2>
+<div align="center">
+  <img src="https://github.com/Vru-Jain/Vru-Jain/blob/output/github-contribution-grid-snake.svg" alt="snake animation" />
+</div>

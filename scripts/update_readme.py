@@ -54,10 +54,9 @@ def arrow(change: float) -> str:
 
 
 def patch_section(content: str, marker: str, new_body: str) -> str:
-    """Replace everything between and ."""
+    """Replace everything between HTML comment markers."""
     pattern = rf"().*?()"
     
-    # Use a lambda function to prevent regex crashes if fetched data contains backslashes
     result, count = re.subn(
         pattern, 
         lambda m: f"{m.group(1)}\n{new_body}\n{m.group(2)}", 
@@ -66,7 +65,7 @@ def patch_section(content: str, marker: str, new_body: str) -> str:
     )
     
     if count == 0:
-        print(f"  Warning: marker {marker} not found in README — section skipped.")
+        print(f"  Warning: marker {marker} not found in README - section skipped.")
     return result
 
 

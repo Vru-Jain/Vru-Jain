@@ -54,10 +54,17 @@ def arrow(change: float) -> str:
 
 
 def patch_section(content: str, marker: str, new_body: str) -> str:
-    """Replace everything between <!-- marker_START --> and <!-- marker_END -->."""
-    pattern = rf"(<!-- {marker}_START -->).*?(<!-- {marker}_END -->)"
-    replacement = rf"\1\n{new_body}\n\2"
-    result, count = re.subn(pattern, replacement, content, flags=re.DOTALL)
+    """Replace everything between and ."""
+    pattern = rf"().*?()"
+    
+    # Use a lambda function to prevent regex crashes if fetched data contains backslashes
+    result, count = re.subn(
+        pattern, 
+        lambda m: f"{m.group(1)}\n{new_body}\n{m.group(2)}", 
+        content, 
+        flags=re.DOTALL
+    )
+    
     if count == 0:
         print(f"  Warning: marker {marker} not found in README — section skipped.")
     return result

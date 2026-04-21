@@ -91,18 +91,22 @@ _Fetching recent commits..._
 
 ---
 
-## Featured Projects
+---
 
-### Cognitive Game-Theoretic Portfolio Optimization (CGPO)
+## Featured Research: Cognitive Graph Portfolio Optimization (CGPO)
 
-An adaptive portfolio allocation framework that combines game-theoretic decision modeling with cognitive computing principles. Targets dynamic market conditions where standard mean-variance assumptions break down due to non-stationarity and strategic agent interaction.
+I am currently developing an adaptive portfolio allocation framework that integrates graph theory with cognitive computing. This project focuses on modeling asset relationships as dynamic networks to optimize risk-adjusted returns in non-stationary markets.
 
-**Stack:** Python, NumPy, SciPy, cvxpy, Matplotlib
+**Technical Core:**
+* **Graph Engine**: Implements network-based asset dependency modeling.
+* **Market Environment**: Built with custom simulation logic for regime-switching scenarios.
+* **Optimization**: Utilizes reinforcement learning agents to navigate complex strategy games.
 
-<details>
-<summary><strong>Methodology &amp; Formal Objective</strong></summary>
+**Full Documentation:**
 
-<br>
+[![Research Paper](https://img.shields.io/badge/Read%20the%20Paper-PDF-informational?style=flat-square&logo=google-scholar&logoColor=white)](PASTE_YOUR_LINK_HERE)
+
+---
 
 **Problem Statement**
 

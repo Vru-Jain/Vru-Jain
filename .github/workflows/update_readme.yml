@@ -29,16 +29,30 @@ jobs:
       - name: Install dependencies
         run: pip install yfinance
 
+
       - name: Run updater script
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/update_readme.py
+        run: |
+          python scripts/update_readme.py
+          echo "--- FILE SIZE CHECK ---"
+          ls -lh README.md
+          
+          # Failsafe: Abort if README is larger than 1 MB
+          SIZE=$(wc -c < README.md)
+          if [ "$SIZE" -gt 1000000 ]; then
+            echo "CRITICAL ERROR: Python script bloated the README to $SIZE bytes!"
+            exit 1
+          fi
 
       - name: Commit changes
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Force remove any corrupted git cache for this file before adding
+          git rm --cached README.md || true
           git add README.md
-          # Only commit if something actually changed
+          
           git diff --cached --quiet || git commit -m "chore: update market data and activity [skip ci]"
           git push

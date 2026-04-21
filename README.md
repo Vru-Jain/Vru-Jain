@@ -91,8 +91,6 @@ _Fetching recent commits..._
 
 ---
 
----
-
 ## Featured Research: Cognitive Graph Portfolio Optimization (CGPO)
 
 I am currently developing an adaptive portfolio allocation framework that integrates graph theory with cognitive computing. This project focuses on modeling asset relationships as dynamic networks to optimize risk-adjusted returns in non-stationary markets.
@@ -105,43 +103,6 @@ I am currently developing an adaptive portfolio allocation framework that integr
 **Full Documentation:**
 
 [![Research Paper](https://img.shields.io/badge/Read%20the%20Paper-PDF-informational?style=flat-square&logo=google-scholar&logoColor=white)](PASTE_YOUR_LINK_HERE)
-
----
-
-**Problem Statement**
-
-Classical mean-variance optimization treats the market as a static environment and investors as fully rational agents with fixed beliefs. CGPO relaxes both assumptions by modeling the allocation problem as a repeated game among boundedly rational agents, where each agent's strategy evolves through cognitive feedback loops informed by observed market regimes.
-
-**Optimization Objective**
-
-The portfolio weight vector $\mathbf{w} \in \mathbb{R}^n$ is chosen to solve:
-
-$$\max_{\mathbf{w}} \left[ \mathbf{w}^\top \boldsymbol{\mu} - \frac{\lambda}{2}\, \mathbf{w}^\top \boldsymbol{\Sigma}\, \mathbf{w} + \gamma \cdot \Phi\!\left(\mathbf{w},\, \mathcal{G}_t\right) \right]$$
-
-subject to $\quad \mathbf{1}^\top \mathbf{w} = 1, \quad \mathbf{w} \geq \mathbf{0}$
-
-where:
-
-| Symbol | Description |
-|---|---|
-| $\boldsymbol{\mu}$ | Vector of expected asset returns |
-| $\boldsymbol{\Sigma}$ | Covariance matrix via rolling Ledoit-Wolf shrinkage estimator |
-| $\lambda$ | Risk aversion coefficient |
-| $\Phi(\mathbf{w}, \mathcal{G}_t)$ | Cognitive game-theoretic term from Nash equilibrium of agent strategy game $\mathcal{G}_t$ at time $t$ |
-| $\gamma$ | Scaling parameter governing strategic interaction influence |
-
-**Key Contributions**
-- Incorporates bounded rationality into the allocation loop, unlike standard MPT
-- Game state $\mathcal{G}_t$ updated at each rebalancing period using a regime-switching filter
-- Benchmarked against equal-weight, mean-variance, and Black-Litterman baselines on NSE-listed equities
-
-<br>
-
-**Read the full paper:**
-
-[![Research Paper](https://img.shields.io/badge/Read%20the%20Paper-CGPO-informational?style=flat-square&logo=google-scholar&logoColor=white)](https://YOUR-PAPER-LINK-HERE)
-
-</details>
 
 ---
 

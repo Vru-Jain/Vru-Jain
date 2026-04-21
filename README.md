@@ -102,7 +102,7 @@ I am currently developing an adaptive portfolio allocation framework that integr
 
 **Full Documentation:**
 
-[![Research Paper](https://img.shields.io/badge/Read%20the%20Paper-PDF-informational?style=flat-square&logo=google-scholar&logoColor=white)](PASTE_YOUR_LINK_HERE)
+[![Research Paper](https://img.shields.io/badge/Read%20the%20Paper-PDF-informational?style=flat-square&logo=google-scholar&logoColor=white)](https://github.com/Vru-Jain/CGPO-Project/blob/9aa340ceb120ee3e1f187b59326f4dd004907c6c/LogBook/Research_Paper__CGPO.pdf)
 
 ---
 

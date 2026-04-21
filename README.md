@@ -41,7 +41,14 @@ Outside of that, I work on stochastic process theory, derivative pricing models,
 > Tracks four indices relevant to my research universe. Auto-updated every 6 hours on trading days via GitHub Actions.
 
 <!-- START MARKET_DATA -->
-_Fetching market data..._
+| Index | Price | Change |
+|---|---|---|
+| S&P 500 | `7,109.14` | v-0.24% |
+| NASDAQ | `24,404.39` | v-0.26% |
+| Nifty 50 | `24,597.35` | ^+0.95% |
+| Gold | `4,806.00` | v-0.01% |
+
+<sub>Last updated: 2026-04-21 09:31 UTC</sub>
 <!-- END MARKET_DATA -->
 
 ---

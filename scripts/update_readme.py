@@ -36,6 +36,7 @@ def arrow(change: float) -> str:
 
 def patch_section(content: str, marker: str, new_body: str) -> str:
     """Replace content between markers using safe string splitting."""
+    # THESE TWO LINES ARE FIXED:
     start_tag = f""
     end_tag = f""
     

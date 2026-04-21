@@ -29,13 +29,13 @@ WATCH_REPOS = []
 
 def arrow(change: float) -> str:
     if change > 0:
-        return f"▲ +{change:.2f}%"
+        return f"^+{change:.2f}%"
     if change < 0:
-        return f"▼ {change:.2f}%"
-    return f"→ {change:.2f}%"
+        return f"v{change:.2f}%"
+    return f"-> {change:.2f}%"
 
 def patch_section(content: str, marker: str, new_body: str) -> str:
-    """Replace content between markers using safe string splitting to avoid regex bugs."""
+    """Replace content between markers using safe string splitting."""
     start_tag = f""
     end_tag = f""
     
@@ -68,7 +68,7 @@ def build_market_block() -> str:
     now_utc = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
     if not YFINANCE_AVAILABLE:
-        return f"| Index | Price | Change |\n|---|---|---|\n| — | — | `yfinance` missing |\n\n<sub>Last updated: {now_utc}</sub>"
+        return f"| Index | Price | Change |\n|---|---|---|\n| N/A | N/A | `yfinance` missing |\n\n<sub>Last updated: {now_utc}</sub>"
 
     rows = []
     for name, ticker in INDICES:
@@ -76,14 +76,14 @@ def build_market_block() -> str:
             data = yf.Ticker(ticker)
             hist = data.history(period="5d")
             if len(hist) < 2:
-                rows.append(f"| {name} | — | no data |")
+                rows.append(f"| {name} | N/A | no data |")
                 continue
             prev_close = hist["Close"].iloc[-2]
             last_close = hist["Close"].iloc[-1]
             pct = (last_close - prev_close) / prev_close * 100
             rows.append(f"| {name} | `{last_close:,.2f}` | {arrow(pct)} |")
         except Exception as e:
-            rows.append(f"| {name} | — | fetch error |")
+            rows.append(f"| {name} | N/A | fetch error |")
 
     table = "\n".join(["| Index | Price | Change |", "|---|---|---|"] + rows)
     return f"{table}\n\n<sub>Last updated: {now_utc}</sub>"
@@ -112,7 +112,7 @@ def build_activity_block(token: str) -> str:
                 message = message[:69] + "..."
             repo_short = repo.split("/")[-1]
             url = f"https://github.com/{repo}/commit/{commit.get('sha', '')}"
-            events.append(f"- [`{sha}`]({url}) **{repo_short}** — {message}")
+            events.append(f"- [`{sha}`]({url}) **{repo_short}** : {message}")
         if len(events) >= 5:
             break
 
@@ -144,7 +144,6 @@ def main():
     content = patch_section(content, "MARKET_DATA", market_block)
     content = patch_section(content, "ACTIVITY", activity_block)
 
-    # Immutable safeguard: Restrict file size to 1 MB maximum
     if len(content.encode('utf-8')) > 1000000:
         print("CRITICAL: Python string expanded beyond 1MB. Aborting disk write to prevent git failure.")
         sys.exit(1)

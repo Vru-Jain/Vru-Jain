@@ -40,17 +40,9 @@ Outside of that, I work on stochastic process theory, derivative pricing models,
 
 > Tracks four indices relevant to my research universe. Auto-updated every 6 hours on trading days via GitHub Actions.
 
-<!-- MARKET_DATA_START -->
+<!-- START MARKET_DATA -->
 _Fetching market data..._
-<!-- MARKET_DATA_END -->
-
----
-
-## Recent Activity
-
-<!-- ACTIVITY_START -->
-_Fetching recent commits..._
-<!-- ACTIVITY_END -->
+<!-- END MARKET_DATA -->
 
 ---
 

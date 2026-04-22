@@ -43,12 +43,12 @@ Outside of that, I work on stochastic process theory, derivative pricing models,
 <!-- START MARKET_DATA -->
 | Index | Price | Change |
 |---|---|---|
-| S&P 500 | `7,064.01` | v-0.63% |
-| NASDAQ | `24,259.96` | v-0.59% |
-| Nifty 50 | `24,378.10` | v-0.81% |
-| Gold | `4,765.80` | ^+1.43% |
+| S&P 500 | `7,120.37` | ^+0.80% |
+| NASDAQ | `24,584.79` | ^+1.34% |
+| Nifty 50 | `24,576.60` | ^+0.87% |
+| Gold | `4,760.10` | ^+1.31% |
 
-<sub>Last updated: 2026-04-22 12:56 UTC</sub>
+<sub>Last updated: 2026-04-22 18:55 UTC</sub>
 <!-- END MARKET_DATA -->
 
 ---

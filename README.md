@@ -4,10 +4,8 @@
 
 <br/>
 
-<h1 align="center">Vrushabh Jain</h1>
-
 <p align="center">
-  <strong>Quantitative Developer &nbsp;|&nbsp; Financial Engineer &nbsp;|&nbsp; Data Scientist</strong>
+  <strong>Quantitative Developer &nbsp;|&nbsp; Data Scientist</strong>
 </p>
 
 <p align="center">

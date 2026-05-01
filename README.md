@@ -22,7 +22,7 @@
 
 I build computational tools at the intersection of quantitative finance and data engineering. My work focuses on portfolio optimization, probabilistic modeling, and the design of systems that turn raw market data into structured, actionable insight.
 
-My current research centers on **Cognitive Graph Portfolio Optimization (CGPO)** — a framework that combines graph theory and cognitive computing to optimize asset allocation and minimize portfolio risk in non-stationary markets.
+My current research centers on **Cognitive Graph Portfolio Optimization (CGPO)** : a framework that combines graph theory and cognitive computing to optimize asset allocation and minimize portfolio risk in non-stationary markets.
 
 Outside of that, I work on stochastic process theory, derivative pricing models, and the infrastructure side of financial pipelines: data ingestion, factor construction, and backtesting architecture.
 

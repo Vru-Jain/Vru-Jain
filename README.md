@@ -97,16 +97,6 @@ An adaptive portfolio allocation framework that integrates graph theory with cog
 
 ---
 
-## GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Vru-Jain&show_icons=true&hide_border=true" alt="GitHub Stats" />
-  &nbsp;
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Vru-Jain&layout=compact&hide_border=true" alt="Top Languages" />
-</p>
-
----
-
 ## Contribution Graph
 
 <div align="center">

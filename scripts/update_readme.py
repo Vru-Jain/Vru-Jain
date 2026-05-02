@@ -32,11 +32,6 @@ WATCH_REPOS = []
 
 
 def arrow(change: float) -> str:
-    """
-    Format percentage change using HTML arrow entities.
-    HTML entities are safer than raw Unicode in generated Markdown.
-    GitHub will render these as ▲ and ▼.
-    """
     if change > 0:
         return f"&#9650; +{change:.2f}%"
     if change < 0:
@@ -45,13 +40,6 @@ def arrow(change: float) -> str:
 
 
 def patch_section(content: str, marker: str, new_body: str) -> str:
-    """
-    Replace content between README markers.
-
-    Example markers:
-    <!-- START MARKET_DATA -->
-    <!-- END MARKET_DATA -->
-    """
     start_tag = f"<!-- START {marker} -->"
     end_tag = f"<!-- END {marker} -->"
 
@@ -65,9 +53,6 @@ def patch_section(content: str, marker: str, new_body: str) -> str:
 
 
 def github_api(path: str, token: str):
-    """
-    Make a GitHub API request.
-    """
     url = f"<https://api.github.com>{path}"
 
     headers = {
@@ -89,9 +74,6 @@ def github_api(path: str, token: str):
 
 
 def build_market_block() -> str:
-    """
-    Build the Markdown table for the Market Pulse section.
-    """
     now_utc = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
     if not YFINANCE_AVAILABLE:
@@ -118,9 +100,7 @@ def build_market_block() -> str:
 
             pct = (last_close - prev_close) / prev_close * 100
 
-            rows.append(
-                f"| {name} | {last_close:,.2f} | {arrow(pct)} |"
-            )
+            rows.append(f"| {name} | {last_close:,.2f} | {arrow(pct)} |")
 
         except Exception as e:
             print(f"Market data fetch error for {name} ({ticker}): {e}")
@@ -138,9 +118,6 @@ def build_market_block() -> str:
 
 
 def build_activity_block(token: str) -> str:
-    """
-    Build a recent GitHub activity block from recent public commits.
-    """
     now_utc = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
     repos = list(WATCH_REPOS)
@@ -174,11 +151,8 @@ def build_activity_block(token: str) -> str:
                 message = message[:69] + "..."
 
             repo_short = repo.split("/")[-1]
-            commit_url = f"<https://github.com/{repo}/commit/>{commit.get('sha', '')}"
 
-            events.append(
-                f"- [`{sha}`]({commit_url}) `{repo_short}` — {message}"
-            )
+            events.append(f"- `{sha}` `{repo_short}` — {message}")
 
             if len(events) >= 5:
                 break
@@ -199,7 +173,6 @@ def main():
 
     if not token:
         print("Warning: GITHUB_TOKEN environment variable is not set.")
-        print("Continuing without authenticated GitHub API requests.")
 
     if not os.path.exists(README_PATH):
         print(f"Error: {README_PATH} not found in working directory.")

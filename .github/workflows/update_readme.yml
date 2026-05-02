@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -44,15 +46,21 @@ jobs:
             echo "CRITICAL ERROR: Python script bloated the README to $SIZE bytes!"
             exit 1
           fi
-
-      - name: Commit changes
+    
+      - name: Commit and push changes
+        shell: bash
         run: |
-          git config user.name  "github-actions[bot]"
+          git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # Force remove any corrupted git cache for this file before adding
-          git rm --cached README.md || true
+      
           git add README.md
-          
-          git diff --cached --quiet || git commit -m "chore: update market data and activity [skip ci]"
-          git push
+      
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+      
+          git commit -m "chore: update market data and activity [skip ci]"
+      
+          git pull --rebase origin main
+          git push origin main

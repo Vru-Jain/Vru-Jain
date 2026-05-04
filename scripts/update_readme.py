@@ -1,10 +1,3 @@
-"""
-update_readme.py
-
-Fetches live market data and recent GitHub commit activity,
-then safely patches dynamic sections in README.md using marker comments.
-"""
-
 import os
 import sys
 import json
@@ -16,7 +9,6 @@ try:
     YFINANCE_AVAILABLE = True
 except ImportError:
     YFINANCE_AVAILABLE = False
-
 
 README_PATH = "README.md"
 GITHUB_USER = "Vru-Jain"
@@ -30,14 +22,12 @@ INDICES = [
 
 WATCH_REPOS = []
 
-
 def arrow(change: float) -> str:
     if change > 0:
         return f"&#9650; +{change:.2f}%"
     if change < 0:
         return f"&#9660; {change:.2f}%"
     return f"&#8594; {change:.2f}%"
-
 
 def patch_section(content: str, marker: str, new_body: str) -> str:
     start_tag = f"<!-- START {marker} -->"
@@ -46,14 +36,13 @@ def patch_section(content: str, marker: str, new_body: str) -> str:
     if start_tag in content and end_tag in content:
         before = content.split(start_tag, 1)[0]
         after = content.split(end_tag, 1)[1]
-        return f"{before}{start_tag}\\n{new_body}\\n{end_tag}{after}"
+        return f"{before}{start_tag}\n{new_body}\n{end_tag}{after}"
 
     print(f"Warning: marker {marker} not found in README.")
     return content
 
-
 def github_api(path: str, token: str):
-    url = f"<https://api.github.com>{path}"
+    url = f"https://api.github.com{path}"
 
     headers = {
         "Accept": "application/vnd.github+json",
@@ -72,15 +61,14 @@ def github_api(path: str, token: str):
         print(f"GitHub API error for {path}: {e}")
         return None
 
-
 def build_market_block() -> str:
     now_utc = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
     if not YFINANCE_AVAILABLE:
         return (
-            "| Index | Price | Change |\\n"
-            "|---|---:|---:|\\n"
-            "| N/A | N/A | yfinance missing |\\n\\n"
+            "| Index | Price | Change |\n"
+            "|---|---:|---:|\n"
+            "| N/A | N/A | yfinance missing |\n\n"
             f"<sub>Last updated: {now_utc}</sub>"
         )
 
@@ -106,7 +94,7 @@ def build_market_block() -> str:
             print(f"Market data fetch error for {name} ({ticker}): {e}")
             rows.append(f"| {name} | N/A | fetch error |")
 
-    table = "\\n".join(
+    table = "\n".join(
         [
             "| Index | Price | Change |",
             "|---|---:|---:|",
@@ -114,8 +102,7 @@ def build_market_block() -> str:
         ]
     )
 
-    return f"{table}\\n\\n<sub>Last updated: {now_utc}</sub>"
-
+    return f"{table}\n\n<sub>Last updated: {now_utc}</sub>"
 
 def build_activity_block(token: str) -> str:
     now_utc = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
@@ -133,7 +120,7 @@ def build_activity_block(token: str) -> str:
             ]
 
     if not repos:
-        return f"Could not retrieve repository list.\\n\\n<sub>Last updated: {now_utc}</sub>"
+        return f"Could not retrieve repository list.\n\n<sub>Last updated: {now_utc}</sub>"
 
     events = []
 
@@ -152,7 +139,7 @@ def build_activity_block(token: str) -> str:
 
             repo_short = repo.split("/")[-1]
 
-            events.append(f"- `{sha}` `{repo_short}` — {message}")
+            events.append(f"- `{sha}` `{repo_short}` - {message}")
 
             if len(events) >= 5:
                 break
@@ -161,12 +148,11 @@ def build_activity_block(token: str) -> str:
             break
 
     if not events:
-        return f"No recent public commits found.\\n\\n<sub>Last updated: {now_utc}</sub>"
+        return f"No recent public commits found.\n\n<sub>Last updated: {now_utc}</sub>"
 
-    body = "\\n".join(events[:5])
+    body = "\n".join(events[:5])
 
-    return f"{body}\\n\\n<sub>Last updated: {now_utc}</sub>"
-
+    return f"{body}\n\n<sub>Last updated: {now_utc}</sub>"
 
 def main():
     token = os.environ.get("GITHUB_TOKEN", "")
@@ -198,7 +184,6 @@ def main():
         f.write(content)
 
     print("README.md updated successfully.")
-
 
 if __name__ == "__main__":
     main()

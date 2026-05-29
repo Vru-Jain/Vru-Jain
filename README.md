@@ -50,12 +50,12 @@ An adaptive portfolio allocation framework that integrates graph theory with cog
 <!-- START MARKET_DATA -->
 | Index | Price | Change |
 |---|---:|---:|
-| S&P 500 | 7,563.63 | &#9650; +0.58% |
-| NASDAQ | 26,917.47 | &#9650; +0.91% |
-| Nifty 50 | 23,546.70 | &#9660; -1.51% |
-| Gold | 4,557.80 | &#9650; +1.30% |
+| S&P 500 | 7,582.70 | &#9650; +0.25% |
+| NASDAQ | 26,960.37 | &#9650; +0.16% |
+| Nifty 50 | 23,547.75 | &#9660; -1.50% |
+| Gold | 4,569.00 | &#9650; +1.55% |
 
-<sub>Last updated: 2026-05-29 09:45 UTC</sub>
+<sub>Last updated: 2026-05-29 14:53 UTC</sub>
 <!-- END MARKET_DATA -->
 
 ---

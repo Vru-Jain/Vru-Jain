@@ -39,7 +39,7 @@ An adaptive portfolio allocation framework that integrates graph theory with cog
 - **Market Environment** — custom simulation logic for regime-switching scenarios.
 - **Optimization** — algorithms for strategic portfolio rebalancing and risk mitigation.
 
-[![Research Paper](https://img.shields.io/badge/Read%20the%20Paper-PDF-informational?style=flat-square&logo=google-scholar&logoColor=white)](https://github.com/Vru-Jain/CGPO-Project/blob/9aa340ceb120ee3e1f187b59326f4dd004907c6c/LogBook/Research_Paper__CGPO.pdf)
+[![Research Paper](https://img.shields.io/badge/Read%20the%20Paper-PDF-informational?style=flat-square&logo=google-scholar&logoColor=white)](https://github.com/Vru-Jain/CGPO-Project/blob/d201c2793526b28b998d55f6cc63fc829a640ca0/LogBook/CGPO_Research_Paper.pdf)
 
 ---
 

@@ -43,6 +43,20 @@ An adaptive portfolio allocation framework that integrates graph theory with cog
 
 ---
 
+## Systems & Infrastructure
+
+Beyond CGPO, these prove out the engineering side of quant work — a matching engine, a pricing library, and the infrastructure to test and feed strategies. Each is verifiably correct: real test suites, cross-checked against known values, and honest about what didn't work.
+
+| Project | What it proves |
+|---|---|
+| [orderbook-engine](https://github.com/Vru-Jain/orderbook-engine) | C++17 limit order book, price-time priority matching, O(1) cancellation, ~3.5M orders/sec |
+| [options-pricing-lib](https://github.com/Vru-Jain/options-pricing-lib) | Black-Scholes, binomial tree, Monte Carlo & implied vol — cross-validated three independent ways |
+| [backtest-engine](https://github.com/Vru-Jain/backtest-engine) | Event-driven backtester with a structurally provable no-look-ahead guarantee |
+| [stat-arb-research](https://github.com/Vru-Jain/stat-arb-research) | Cointegration + GARCH + pairs signal research, reported honestly — including a negative out-of-sample result |
+| [market-feed-handler](https://github.com/Vru-Jain/market-feed-handler) | Real-time Binance order book reconstruction with latency instrumentation |
+
+---
+
 ## Market Pulse
 
 > Tracks four indices relevant to my research universe. Auto-updated every 6 hours on trading days via GitHub Actions.
@@ -71,7 +85,6 @@ An adaptive portfolio allocation framework that integrates graph theory with cog
 **Programming & Scripting**
 <p>
   <img src="https://img.shields.io/badge/Python-3670A0?style=flat-square&logo=python&logoColor=ffdd54" alt="Python" />
-  <img src="https://img.shields.io/badge/R-%23276DC3.svg?style=flat-square&logo=r&logoColor=white" alt="R" />
   <img src="https://img.shields.io/badge/C%2B%2B-%2300599C.svg?style=flat-square&logo=c%2B%2B&logoColor=white" alt="C++" />
   <img src="https://img.shields.io/badge/SQL-4479A1.svg?style=flat-square&logo=mysql&logoColor=white" alt="SQL" />
   <img src="https://img.shields.io/badge/PowerShell-%235391FE.svg?style=flat-square&logo=powershell&logoColor=white" alt="PowerShell" />
@@ -83,15 +96,14 @@ An adaptive portfolio allocation framework that integrates graph theory with cog
   <img src="https://img.shields.io/badge/NumPy-%23013243.svg?style=flat-square&logo=numpy&logoColor=white" alt="NumPy" />
   <img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=flat-square&logo=Matplotlib&logoColor=black" alt="Matplotlib" />
   <img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=flat-square&logo=scikit-learn&logoColor=white" alt="scikit-learn" />
-  <img src="https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=flat-square&logo=TensorFlow&logoColor=white" alt="TensorFlow" />
   <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat-square&logo=PyTorch&logoColor=white" alt="PyTorch" />
 </p>
 
 **Infrastructure & DevOps**
 <p>
-  <img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=flat-square&logo=amazon-aws&logoColor=white" alt="AWS" />
-  <img src="https://img.shields.io/badge/Google%20Cloud-%234285F4.svg?style=flat-square&logo=google-cloud&logoColor=white" alt="Google Cloud" />
   <img src="https://img.shields.io/badge/Docker-%230db7ed.svg?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
+  <img src="https://img.shields.io/badge/Vercel-%23000000.svg?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" />
+  <img src="https://img.shields.io/badge/Modal-%2300C2FF.svg?style=flat-square&logoColor=white" alt="Modal" />
   <img src="https://img.shields.io/badge/Git-%23F05033.svg?style=flat-square&logo=git&logoColor=white" alt="Git" />
 </p>
 
@@ -106,5 +118,5 @@ An adaptive portfolio allocation framework that integrates graph theory with cog
 ---
 
 <p align="center">
-  <sub>Open to quantitative research roles, fintech internships, and open-source collaboration on financial tools.</sub>
+  <sub>Open to full-time quantitative developer and quantitative research roles, and open-source collaboration on financial tools.</sub>
 </p>

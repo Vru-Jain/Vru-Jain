@@ -66,10 +66,10 @@ Beyond CGPO, these prove out the engineering side of quant work — a matching e
 |---|---:|---:|
 | S&P 500 | 7,805.45 | &#9660; -0.02% |
 | NASDAQ | 27,204.38 | &#9660; -0.15% |
-| Nifty 50 | 22,721.95 | &#9650; +1.60% |
-| Gold | 4,187.60 | &#9660; -0.07% |
+| Nifty 50 | 22,622.70 | &#9660; -0.44% |
+| Gold | 4,166.70 | &#9660; -0.25% |
 
-<sub>Last updated: 2026-10-14 03:16 UTC</sub>
+<sub>Last updated: 2026-10-14 11:02 UTC</sub>
 <!-- END MARKET_DATA -->
 
 ---

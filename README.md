@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="github-banner.png" width="100%" alt="Vrushabh Jain — Quantitative Developer & Data Scientist" />
+  <img src="banner-ai-quant.png" width="100%" alt="Vrushabh Jain, AI Engineer and Quant Developer" />
 </div>
 
 <p align="center">

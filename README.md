@@ -20,11 +20,13 @@
 
 ## About
 
-I build computational tools at the intersection of quantitative finance and data engineering. My work focuses on portfolio optimization, probabilistic modeling, and the design of systems that turn raw market data into structured, actionable insight.
+I'm an AI engineer and quant developer in Mumbai, working as a software developer at Martech Systems.
 
-My current research centers on **Cognitive Graph Portfolio Optimization (CGPO)** : a framework that combines graph theory and cognitive computing to optimize asset allocation and minimize portfolio risk in non-stationary markets.
+On the AI side, I build document pipelines where a deterministic engine does the work and a self-hosted LLM handles only what the rules can't. [Parsel](https://github.com/Vru-Jain/parsel) is the public example: it turns spare-parts tables in ship manuals into structured Excel, and calls a local Ollama model only for layouts it has never seen.
 
-Outside of that, I work on stochastic process theory, derivative pricing models, and the infrastructure side of financial pipelines: data ingestion, factor construction, and backtesting architecture.
+On the quant side, I build the infrastructure under trading: a C++17 matching engine, an options pricing library, an event-driven backtester, and a live order book feed. The two meet in **CGPO**, where a graph neural network and a reinforcement-learning agent decide portfolio weights.
+
+Each repo backs its main claim with a test. The backtester proves it can't see the next bar, and the pricing library computes its Greeks three independent ways and checks that they agree.
 
 ---
 
